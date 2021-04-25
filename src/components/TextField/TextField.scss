@@ -1,0 +1,46 @@
+@import "../../styles/base.scss";
+
+.TextField {
+  width: 100%;
+  &-label {
+    margin-bottom: 7px;
+  }
+  &-container {
+    position: relative;
+  }
+  &-input {
+    font-family: "Quicksand", sans-serif;
+    width: 100%;
+    border-radius: 1px;
+    height: 45px;
+    border: 1px solid #c5d0d3;
+    padding: 3px 10px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: border 0.1s ease-in-out;
+    &[type="password"] {
+      padding-right: 50px;
+    }
+    &:focus {
+      border: 2px solid $secondary-color;
+      outline: none;
+      transition: border 0.1s ease-in-out;
+    }
+    &::placeholder {
+      font-size: 1rem;
+      letter-spacing: normal;
+      font-weight: 600;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &-length-counter {
+    width: 100%;
+    text-align: right;
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+  }
+}
