@@ -1,0 +1,52 @@
+@import "./styles/base.scss";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, #root {
+  height: 100vh;
+  position: relative;
+}
+
+button {
+  font-family: 'Quicksand', sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+p {
+  font-weight: 500;
+  color: $secondary-color;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: $secondary-color;
+  position: relative;
+  margin-top: 0;
+  &::after {
+    content: '';
+    height: 4px;
+    width: 50px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    background-color: #40c3df;
+  }
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 900;
+  color: $secondary-color;
+  margin: 0;
+}

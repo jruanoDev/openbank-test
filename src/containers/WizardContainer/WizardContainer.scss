@@ -1,0 +1,19 @@
+@import "../../styles/base";
+
+.Wizard {
+    width: 100%;
+    max-width: 950px;
+    background-color: $white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    margin: 0 20px;
+    &-header {
+        background-color: #ccd5da;
+        height: 80px;
+    }
+    &-content {
+        box-shadow: 0 0 3px 1px rgba(0,0,0,.2);
+    }
+}
