@@ -3,7 +3,6 @@ import "./Form.scss";
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-grid-system";
 
-import ButtonContainer from "../../components/ButtonContainer/ButtonContainer";
 import TextField from "../../components/TextField/TextField";
 
 const Form = () => {
@@ -61,7 +60,7 @@ const Form = () => {
               <TextField
                 label="Crea tu pista para recordar tu contraseña (opcional)"
                 placeHolder="Introduce tu pista"
-                maxLength={60}
+                maxLength={255}
                 value={hint}
                 onChange={onHintChange}
               />
