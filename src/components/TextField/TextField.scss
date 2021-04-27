@@ -15,12 +15,14 @@
     height: 45px;
     border: 1px solid #c5d0d3;
     padding: 3px 10px;
-    font-size: 1.8rem;
+    font-size: 1rem;
     font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: normal;
     transition: border 0.1s ease-in-out;
     &[type="password"] {
       padding-right: 50px;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
     }
     &:focus {
       border: 2px solid $secondary-color;

@@ -9,9 +9,9 @@ const VisibilityButton = ({ type, onClick }) => {
   return (
     <button className="VisibilityButton" onClick={() => onClick(type)}>
       {type === "password" ? (
-        <VisibilityIcon width="26" height="26" fill="#595959" />
+        <VisibilityIcon width="26" height="26" fill="#6b6b6b" />
       ) : (
-        <VisibilityOffIcon width="26" height="26" fill="#595959" />
+        <VisibilityOffIcon width="26" height="26" fill="#6b6b6b" />
       )}
     </button>
   );

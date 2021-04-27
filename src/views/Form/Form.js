@@ -12,6 +12,7 @@ const Form = () => {
   const onHintChange = (e) => {
     setHint(e.target.value);
   };
+
   return (
     <div className="Form">
       <div className="Form-content">
@@ -26,7 +27,7 @@ const Form = () => {
               <p>
                 En primer lugar, debes crear una contraseña diferente para sus
                 pertenencias electrónicas. <br />
-                No podrás recuperar tu contraseña, así que recuérdela bien
+                No podrás recuperar tu contraseña, así que recuérdela bien.
               </p>
             </Col>
           </Row>
@@ -68,7 +69,6 @@ const Form = () => {
           </Row>
         </Container>
       </div>
-      <ButtonContainer />
     </div>
   );
 };

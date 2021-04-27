@@ -36,6 +36,7 @@ const TextField = ({
           placeholder={placeHolder}
           type={inputType}
           value={value}
+          maxLength={maxLength}
           onChange={(e) => onChange(e)}
         />
         {type === "password" && (

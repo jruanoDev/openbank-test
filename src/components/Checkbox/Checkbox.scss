@@ -1,0 +1,39 @@
+@import "../../styles/base.scss";
+
+.Checkbox {
+  min-width: 22px;
+  height: 22px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  border-radius: 3px;
+  border: 2px solid $secondary-color;
+  margin: 0;
+  transition: all 0.15s ease-in-out;
+  &::after {
+    content: none;
+  }
+  &:checked {
+    background-color: $secondary-color;
+    transition: all 0.15s ease-in-out;
+    &::after {
+      content: url("../../assets/img/checked.svg");
+      position: absolute;
+      top: 51%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &-container {
+    display: flex;
+    align-items: center;
+    & > * {
+      cursor: pointer;
+    }
+  }
+  &-label {
+    margin-left: 10px;
+    font-weight: 500;
+  }
+}
