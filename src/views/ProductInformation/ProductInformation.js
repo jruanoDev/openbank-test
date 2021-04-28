@@ -1,7 +1,9 @@
 import "./ProductInformation.scss";
+import "../../i18n";
 
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-grid-system";
+import { useTranslation } from "react-i18next";
 
 import { ReactComponent as ArrowRight } from "../../assets/img/arrow_right.svg";
 import { ReactComponent as LockIcon } from "../../assets/img/icon1.svg";
@@ -15,6 +17,8 @@ const ICON_HEIGHT = 150;
 const ProductInformation = ({ goForward }) => {
   const [termsAccepted, setTermsAccepted] = useState(false);
 
+  const { t } = useTranslation();
+
   const onTermsCheckChange = () => setTermsAccepted((prevState) => !prevState);
   return (
     <div className="ProductInfo">
@@ -22,7 +26,7 @@ const ProductInformation = ({ goForward }) => {
         <Container fluid>
           <Row>
             <Col>
-              <h1 className="h1-sub">Crea tu Password Manager</h1>
+              <h1 className="h1-sub">{t("PasswordManagerTitle")}</h1>
             </Col>
           </Row>
           <Row className="Features">
