@@ -32,44 +32,29 @@ const ProductInformation = ({ goForward }) => {
           <Row className="Features">
             <Col xs={6} className="Features-column">
               <HumanIcon height={ICON_HEIGHT} />
-              <p>
-                Guarda aquí todas tus contraseñas, datos o cualquier
-                información, olvida las notas de papel y las aplicaciones no
-                protegidas
-              </p>
+              <p>{t("PI_Feature1")}</p>
             </Col>
             <Col xs={6} className="Features-column">
               <LockIcon height={ICON_HEIGHT} />
-              <p>
-                Crea tu clave maestra: sólo tú podrás acceder a tus secretos con
-                ella
-              </p>
+              <p>{t("PI_Feature2")}</p>
             </Col>
           </Row>
 
           <Row style={{ marginBottom: 20 }}>
             <Col xs={12}>
-              <h3>Cómo funciona</h3>
+              <h3>{t("PI_Subtitle1")}</h3>
             </Col>
             <Col>
-              <p style={{ marginTop: 10 }}>
-                En primer lugar, debes crear una contraseña diferente para sus
-                pertenencias electrónicas. No podrás recuperar tu contraseña,
-                así que recuérdela bien.
-              </p>
+              <p style={{ marginTop: 10 }}>{t("PI_Text1")}</p>
             </Col>
           </Row>
 
           <Row>
             <Col xs={12}>
-              <h3>Qué datos puedes guardar</h3>
+              <h3>{t("PI_Subtitle2")}</h3>
             </Col>
             <Col>
-              <p style={{ marginTop: 10 }}>
-                Por ejemplo, el número de tu tarjeta, el PIN y el PUK de tu
-                teléfono móvil, el número de serie de alguno de tus dispositivos
-                o cualquier información que necesites tener en un lugar seguro.
-              </p>
+              <p style={{ marginTop: 10 }}>{t("PI_Text2")}</p>
             </Col>
           </Row>
 
@@ -78,9 +63,7 @@ const ProductInformation = ({ goForward }) => {
               <Checkbox
                 checked={termsAccepted}
                 onChange={onTermsCheckChange}
-                label={
-                  "Declaro ser mayor de edad y acepto que mis datos sean tratados según la Política de protección de datos."
-                }
+                label={t("PI_Data_Protection")}
               />
             </Col>
           </Row>
@@ -95,7 +78,7 @@ const ProductInformation = ({ goForward }) => {
             onClick={goForward}
             disabled={!termsAccepted}
           >
-            Siguiente
+            {t("Wizard_Next_Button")}
           </Button>
         }
       />

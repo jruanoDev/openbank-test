@@ -2,6 +2,7 @@ import "./FormPage.scss";
 
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-grid-system";
+import { Trans, useTranslation } from "react-i18next";
 
 import { ReactComponent as ArrowRight } from "../../assets/img/arrow_right.svg";
 import Button from "../../components/Button/Button";
@@ -16,13 +17,14 @@ const FormPage = ({ onFormSuccess, goForward, goBackwards }) => {
     hint: "",
   });
 
+  const { t } = useTranslation();
+
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false); // setear loading en botón
 
   const errorMessages = {
-    password:
-      "La contraseña debe tener entre 8 y 24 carácteres, un número y una mayúscula",
-    repeatPassword: "Las contraseñas no coinciden",
+    password: t("FORM_Password_Validation"),
+    repeatPassword: t("FORM_RepeatPassword_Validation"),
   };
 
   const validate = {
@@ -79,15 +81,17 @@ const FormPage = ({ onFormSuccess, goForward, goBackwards }) => {
         <Container fluid>
           <Row>
             <Col>
-              <h1 className="h1-sub">Crea tu Password Manager</h1>
+              <h1 className="h1-sub">{t("PasswordManagerTitle")}</h1>
             </Col>
           </Row>
           <Row>
             <Col>
               <p>
-                En primer lugar, debes crear una contraseña diferente para sus
-                pertenencias electrónicas. <br />
-                No podrás recuperar tu contraseña, así que recuérdela bien.
+                <Trans i18nKey="FORM_Description">
+                  En primer lugar, debes crear una contraseña diferente para sus
+                  pertenencias electrónicas. <br />
+                  No podrás recuperar tu contraseña, así que recuérdela bien.
+                </Trans>
               </p>
             </Col>
           </Row>
@@ -107,11 +111,13 @@ const FormPage = ({ onFormSuccess, goForward, goBackwards }) => {
               onClick={handleFormSubmit}
               loading={loading}
             >
-              Siguiente
+              {t("Wizard_Next_Button")}
             </Button>
           </Col>
         }
-        cancelButton={<Button onClick={goBackwards}>Cancelar</Button>}
+        cancelButton={
+          <Button onClick={goBackwards}>{t("Wizard_Back_Button")}</Button>
+        }
       />
     </div>
   );

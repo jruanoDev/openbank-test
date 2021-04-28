@@ -1,17 +1,21 @@
 import React from "react";
 import { Col, Row } from "react-grid-system";
+import { useTranslation } from "react-i18next";
 
 import TextField from "../../../components/TextField/TextField";
 
 const PasswordForm = ({ onChange, values, errors }) => {
   const { password, repeatPassword, hint } = values;
+
+  const { t } = useTranslation();
+
   return (
     <>
       <Row style={{ marginTop: 15 }}>
         <Col xs={5}>
           <TextField
-            label="Crea tu Contraseña Maestra"
-            placeHolder="Escribe tu contraseña"
+            label={t("FORM_Input_Label_1")}
+            placeHolder={t("FORM_Input_Placeholder_1")}
             type="password"
             id="password"
             name="password"
@@ -23,8 +27,8 @@ const PasswordForm = ({ onChange, values, errors }) => {
         </Col>
         <Col xs={5}>
           <TextField
-            label="Repite tu Contraseña Maestra"
-            placeHolder="Repite tu contraseña"
+            label={t("FORM_Input_Label_2")}
+            placeHolder={t("FORM_Input_Placeholder_2")}
             type="password"
             id="repeatPassword"
             name="repeatPassword"
@@ -38,17 +42,14 @@ const PasswordForm = ({ onChange, values, errors }) => {
 
       <Row style={{ marginTop: 30 }}>
         <Col>
-          <p>
-            También puedes crear una pista que te ayude a recordar tu contraseña
-            maestra.
-          </p>
+          <p>{t("FORM_Description_2")}</p>
         </Col>
       </Row>
       <Row>
         <Col>
           <TextField
-            label="Crea tu pista para recordar tu contraseña (opcional)"
-            placeHolder="Introduce tu pista"
+            label={t("FORM_Input_Label_3")}
+            placeHolder={t("FORM_Input_Placeholder_3")}
             maxLength={255}
             name="hint"
             value={hint}

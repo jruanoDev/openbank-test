@@ -2,6 +2,7 @@ import "./Feedback.scss";
 
 import React from "react";
 import { Col, Container, Row } from "react-grid-system";
+import { useTranslation } from "react-i18next";
 
 import { ReactComponent as ArrowRight } from "../../assets/img/arrow_right.svg";
 import { ReactComponent as DoneIcon } from "../../assets/img/done.svg";
@@ -10,19 +11,19 @@ import Button from "../../components/Button/Button";
 import ButtonContainer from "../../components/ButtonContainer/ButtonContainer";
 
 const Feedback = ({ success, restart }) => {
+  const { t } = useTranslation();
+
   const okData = {
-    title: "¡Tu Password Manager ya está creado!",
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut",
+    title: t("Feedback_Ok_Title"),
+    text: t("Feedback_Ok_Text"),
   };
 
   const koData = {
-    title: "Ha habido un error",
-    text:
-      "No hemos podido modificar tu contraseña maestra. Inténtalo más tarde.",
+    title: t("Feedback_Ko_Title"),
+    text: t("Feedback_Ko_Text"),
   };
 
-  const onFormCompleted = () => alert("Formulario completado");
+  const onFormCompleted = () => alert(t("Form_Alert"));
 
   const endAddornment = <ArrowRight fill="#ff0049" width="24" height="24" />;
   const button = success ? (
@@ -31,11 +32,11 @@ const Feedback = ({ success, restart }) => {
       color="primary"
       onClick={onFormCompleted}
     >
-      Acceder
+      {t("Feedback_Ok_Button")}
     </Button>
   ) : (
     <Button endAddornment={endAddornment} color="primary" onClick={restart}>
-      Volver a Password Manager
+      {t("Feedback_Ko_Button")}
     </Button>
   );
 
