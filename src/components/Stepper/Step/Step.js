@@ -2,7 +2,7 @@ import "./Step.scss";
 
 import React from "react";
 
-import { ReactComponent as CompletedIcon } from "../../assets/img/checked.svg";
+import { ReactComponent as CompletedIcon } from "../../../assets/img/checked.svg";
 
 const Step = ({ index, active, completed, isLast }) => {
   const stepStateClassname = active ? "-active" : completed ? "-completed" : "";

@@ -2,7 +2,7 @@ import "./Stepper.scss";
 
 import React from "react";
 
-import Step from "./Step";
+import Step from "./Step/Step";
 
 const Stepper = ({ totalSteps, activeStep }) => {
   const renderSteps = () => {

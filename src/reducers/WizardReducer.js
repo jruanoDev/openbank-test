@@ -26,6 +26,6 @@ export const wizardReducer = (state, action) => {
       };
 
     default:
-      throw new Error("You must provide a type property");
+      throw new Error("You must provide an action type");
   }
 };

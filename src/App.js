@@ -1,22 +1,24 @@
 import "./App.scss";
 
-import React from "react";
+import React, { useState } from "react";
 
-import WizardContainer from "./containers/WizardContainer/WizardContainer";
+import Wizard from "./components/Wizard/Wizard";
 import Feedback from "./views/Feedback/Feedback";
-import Form from "./views/Form/Form";
+import FormPage from "./views/FormPage/FormPage";
 import ProductInformation from "./views/ProductInformation/ProductInformation";
 
 const App = () => {
+  const [success, setSuccess] = useState(false);
+
   return (
     <div className="App">
       <div className="App-header" />
       <main className="App-content">
-        <WizardContainer>
+        <Wizard>
           <ProductInformation />
-          <Form />
-          <Feedback />
-        </WizardContainer>
+          <FormPage onFormSuccess={(o) => setSuccess(o)} />
+          <Feedback success={success} />
+        </Wizard>
       </main>
     </div>
   );

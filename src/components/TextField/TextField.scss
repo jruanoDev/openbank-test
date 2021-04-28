@@ -3,9 +3,10 @@
 .TextField {
   width: 100%;
   &-label {
-    margin-bottom: 7px;
+    width: 100%;
   }
   &-container {
+    margin-top: 7px;
     position: relative;
   }
   &-input {
@@ -23,6 +24,9 @@
       padding-right: 50px;
       font-size: 1.8rem;
       letter-spacing: 2px;
+    }
+    &-error {
+      border: 1px solid $color-error;
     }
     &:focus {
       border: 2px solid $secondary-color;
@@ -44,5 +48,11 @@
     display: inline-block;
     margin-top: 5px;
     font-size: 0.8rem;
+    font-weight: 100;
+  }
+  &-error {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    color: $color-error;
   }
 }

@@ -3,26 +3,31 @@ import "./ProductInformation.scss";
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-grid-system";
 
+import { ReactComponent as ArrowRight } from "../../assets/img/arrow_right.svg";
 import { ReactComponent as LockIcon } from "../../assets/img/icon1.svg";
 import { ReactComponent as HumanIcon } from "../../assets/img/icon2.svg";
+import Button from "../../components/Button/Button";
+import ButtonContainer from "../../components/ButtonContainer/ButtonContainer";
 import Checkbox from "../../components/Checkbox/Checkbox";
 
-const ProductInformation = () => {
+const ICON_HEIGHT = 150;
+
+const ProductInformation = ({ goForward }) => {
   const [termsAccepted, setTermsAccepted] = useState(false);
 
-  const onTermsCheckChange = () => setTermsAccepted(!termsAccepted);
+  const onTermsCheckChange = () => setTermsAccepted((prevState) => !prevState);
   return (
     <div className="ProductInfo">
       <div className="ProductInfo-content">
         <Container fluid>
           <Row>
             <Col>
-              <h1>Crea tu Password Manager</h1>
+              <h1 className="h1-sub">Crea tu Password Manager</h1>
             </Col>
           </Row>
           <Row className="Features">
             <Col xs={6} className="Features-column">
-              <HumanIcon height={150} />
+              <HumanIcon height={ICON_HEIGHT} />
               <p>
                 Guarda aquí todas tus contraseñas, datos o cualquier
                 información, olvida las notas de papel y las aplicaciones no
@@ -30,7 +35,7 @@ const ProductInformation = () => {
               </p>
             </Col>
             <Col xs={6} className="Features-column">
-              <LockIcon height={150} />
+              <LockIcon height={ICON_HEIGHT} />
               <p>
                 Crea tu clave maestra: sólo tú podrás acceder a tus secretos con
                 ella
@@ -77,6 +82,19 @@ const ProductInformation = () => {
           </Row>
         </Container>
       </div>
+
+      <ButtonContainer
+        submitButton={
+          <Button
+            type="filled"
+            endAddornment={<ArrowRight fill="#fff" width="24" height="24" />}
+            onClick={goForward}
+            disabled={!termsAccepted}
+          >
+            Siguiente
+          </Button>
+        }
+      />
     </div>
   );
 };

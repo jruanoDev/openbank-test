@@ -12,11 +12,22 @@
 
 .Button {
   background-color: transparent;
-  color: $secondary-color;
   padding: 10px 20px 10px 0px;
+  &.color-primary {
+    color: $primary-color;
+  }
+  &.color-secondary {
+    color: $secondary-color;
+  }
   &-filled {
+    transition: background-color 0.2s ease-in-out;
     background-color: $secondary-color;
     color: $white;
+    &:disabled {
+      transition: background-color 0.2s ease-in-out;
+      background-color: #8fb0c4;
+      cursor: auto;
+    }
   }
   &-endAddornment {
     margin-top: 2px;

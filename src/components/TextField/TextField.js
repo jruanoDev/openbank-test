@@ -4,14 +4,20 @@ import React, { useState } from "react";
 
 import VisibilityButton from "../VisibilityButton/VisibilityButton";
 
-const Label = ({ children }) => (
-  <label className="TextField-label">{children}</label>
+const Label = ({ children, labelFor }) => (
+  <label htmlFor={labelFor} className="TextField-label">
+    {children}
+  </label>
 );
 
 const LenghtCounter = ({ value, max }) => (
   <span className="TextField-length-counter">
     {value.length} / {max}
   </span>
+);
+
+const ErrorMessage = ({ children }) => (
+  <p className="TextField-error">{children}</p>
 );
 
 const TextField = ({
@@ -21,6 +27,10 @@ const TextField = ({
   maxLength,
   value,
   onChange,
+  id,
+  name,
+  tabIndex,
+  error,
 }) => {
   const [inputType, setInputType] = useState(type);
 
@@ -29,21 +39,29 @@ const TextField = ({
 
   return (
     <div className="TextField">
-      <Label>{label}</Label>
-      <div className="TextField-container">
-        <input
-          className="TextField-input"
-          placeholder={placeHolder}
-          type={inputType}
-          value={value}
-          maxLength={maxLength}
-          onChange={(e) => onChange(e)}
-        />
-        {type === "password" && (
-          <VisibilityButton type={inputType} onClick={onVisibilityEnabled} />
-        )}
-        {maxLength && <LenghtCounter max={maxLength} value={value} />}
-      </div>
+      <Label labelFor={id}>
+        {label}
+        <div className="TextField-container">
+          <input
+            name={name}
+            id={id}
+            className={`TextField-input ${
+              error ? "TextField-input-error" : ""
+            }`}
+            placeholder={placeHolder}
+            type={inputType}
+            value={value}
+            maxLength={maxLength}
+            onChange={(e) => onChange(e)}
+            tabIndex={tabIndex}
+          />
+          {type === "password" && (
+            <VisibilityButton type={inputType} onClick={onVisibilityEnabled} />
+          )}
+          {maxLength && <LenghtCounter max={maxLength} value={value} />}
+        </div>
+        {error && <ErrorMessage>{error}</ErrorMessage>}
+      </Label>
     </div>
   );
 };

@@ -1,7 +1,10 @@
 @import "../../styles/base.scss";
 
 .ButtonContainer {
-    height: 130px;
-    border-top: 2px solid #f3f3f3;
-    padding: 0 50px;
+  height: 130px;
+  border-top: 2px solid #f3f3f3;
+  padding: 0 50px;
+  &-submit {
+    text-align: right;
+  }
 }
