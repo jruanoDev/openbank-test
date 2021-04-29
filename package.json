@@ -2,6 +2,7 @@
   "name": "openbank-test",
   "author": "Jose María Ruano Gálvez",
   "version": "0.1.0",
+  "homepage": "https://jruanodev.github.io/openbank-test",
   "private": true,
   "dependencies": {
     "i18next": "^17.0.16",
@@ -16,7 +17,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,6 +38,7 @@
     ]
   },
   "devDependencies": {
-    "babel-plugin-transform-class-properties": "^6.24.1"
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "gh-pages": "^3.1.0"
   }
 }
