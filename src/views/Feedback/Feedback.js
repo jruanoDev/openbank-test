@@ -46,7 +46,7 @@ const Feedback = ({ success, restart }) => {
       <div className="Feedback-content">
         <Container fluid>
           <Row>
-            <Col xs="content">
+            <Col xs={12} sm="content">
               {success ? (
                 <DoneIcon width="64" height="64" />
               ) : (

@@ -2,6 +2,9 @@
 
 .TextField {
   width: 100%;
+  @include sm {
+    margin-top: 15px;
+  }
   &-label {
     width: 100%;
   }
@@ -15,7 +18,7 @@
     border-radius: 1px;
     height: 45px;
     border: 1px solid #c5d0d3;
-    padding: 3px 10px;
+    padding: 3px 45px 3px 10px;
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: normal;

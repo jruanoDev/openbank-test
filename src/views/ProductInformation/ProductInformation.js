@@ -19,6 +19,13 @@ const ProductInformation = ({ goForward }) => {
 
   const { t } = useTranslation();
 
+  const Feature = ({ icon, text }) => (
+    <>
+      {icon}
+      <p>{text}</p>
+    </>
+  );
+
   const onTermsCheckChange = () => setTermsAccepted((prevState) => !prevState);
   return (
     <div className="ProductInfo">
@@ -30,13 +37,17 @@ const ProductInformation = ({ goForward }) => {
             </Col>
           </Row>
           <Row className="Features">
-            <Col xs={6} className="Features-column">
-              <HumanIcon height={ICON_HEIGHT} />
-              <p>{t("PI_Feature1")}</p>
+            <Col xs={12} sm={6} className="Features-column">
+              <Feature
+                icon={<HumanIcon height={ICON_HEIGHT} />}
+                text={t("PI_Feature1")}
+              />
             </Col>
-            <Col xs={6} className="Features-column">
-              <LockIcon height={ICON_HEIGHT} />
-              <p>{t("PI_Feature2")}</p>
+            <Col xs={12} sm={6} className="Features-column">
+              <Feature
+                icon={<LockIcon height={ICON_HEIGHT} />}
+                text={t("PI_Feature2")}
+              />
             </Col>
           </Row>
 

@@ -9,7 +9,9 @@ const ButtonContainer = ({ submitButton, cancelButton }) => {
       <Container fluid style={{ height: "100%" }}>
         <Row justify="between" align="center" style={{ height: "100%" }}>
           {cancelButton && (
-            <Col className="ButtonContainer-cancel">{cancelButton}</Col>
+            <Col xs="content" className="ButtonContainer-cancel">
+              {cancelButton}
+            </Col>
           )}
           {submitButton && (
             <Col className="ButtonContainer-submit">{submitButton}</Col>

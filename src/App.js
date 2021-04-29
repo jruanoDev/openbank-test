@@ -11,16 +11,16 @@ const App = () => {
   const [success, setSuccess] = useState(false);
 
   return (
-    <div className="App">
-      <div className="App-header" />
-      <main className="App-content">
+    <main className="App">
+      <header className="App-header" />
+      <section className="App-content">
         <Wizard>
           <ProductInformation />
           <FormPage onFormSuccess={(o) => setSuccess(o)} />
           <Feedback success={success} />
         </Wizard>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 };
 

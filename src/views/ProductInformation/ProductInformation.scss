@@ -1,15 +1,12 @@
 @import "../../styles/base.scss";
 
-.ProductInfo {
-  &-content {
-    padding: 35px 50px;
-  }
-}
-
 .Features {
   margin: 60px 0;
   &-column {
     text-align: center;
+    @include sm {
+      margin-top: 15px;
+    }
     & p {
       padding: 0 20px;
     }

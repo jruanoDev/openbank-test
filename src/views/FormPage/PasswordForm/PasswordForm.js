@@ -12,7 +12,7 @@ const PasswordForm = ({ onChange, values, errors }) => {
   return (
     <>
       <Row style={{ marginTop: 15 }}>
-        <Col xs={5}>
+        <Col xs={12} sm={5}>
           <TextField
             label={t("FORM_Input_Label_1")}
             placeHolder={t("FORM_Input_Placeholder_1")}
@@ -25,7 +25,7 @@ const PasswordForm = ({ onChange, values, errors }) => {
             error={errors.password}
           />
         </Col>
-        <Col xs={5}>
+        <Col xs={12} sm={5}>
           <TextField
             label={t("FORM_Input_Label_2")}
             placeHolder={t("FORM_Input_Placeholder_2")}

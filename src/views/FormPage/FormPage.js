@@ -1,5 +1,3 @@
-import "./FormPage.scss";
-
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-grid-system";
 import { Trans, useTranslation } from "react-i18next";
@@ -12,15 +10,15 @@ import PasswordForm from "./PasswordForm/PasswordForm";
 
 const FormPage = ({ onFormSuccess, goForward, goBackwards }) => {
   const [formValues, setFormValues] = useState({
-    password: "pruebaKO123a",
-    repeatPassword: "pruebaKO123a",
+    password: "",
+    repeatPassword: "",
     hint: "",
   });
 
   const { t } = useTranslation();
 
   const [errors, setErrors] = useState({});
-  const [loading, setLoading] = useState(false); // setear loading en botón
+  const [loading, setLoading] = useState(false);
 
   const errorMessages = {
     password: t("FORM_Password_Validation"),
@@ -53,6 +51,11 @@ const FormPage = ({ onFormSuccess, goForward, goBackwards }) => {
       repeatPassword: validate.repeatPassword(password, repeatPassword),
     };
 
+    const end = (success) => {
+      onFormSuccess(success);
+      goForward();
+    };
+
     if (!formValidation.password && !formValidation.repeatPassword) {
       setErrors({});
       setLoading(true);
@@ -60,15 +63,11 @@ const FormPage = ({ onFormSuccess, goForward, goBackwards }) => {
       submitForm(password)
         .then(() => {
           setLoading(false);
-
-          onFormSuccess(true);
-          goForward();
+          end(true);
         })
         .catch(() => {
           setLoading(false);
-
-          onFormSuccess(false);
-          goForward();
+          end(false);
         });
     } else {
       setErrors(formValidation);
@@ -104,16 +103,14 @@ const FormPage = ({ onFormSuccess, goForward, goBackwards }) => {
       </div>
       <ButtonContainer
         submitButton={
-          <Col className="ButtonContainer-submit">
-            <Button
-              type="filled"
-              endAddornment={<ArrowRight fill="#fff" width="24" height="24" />}
-              onClick={handleFormSubmit}
-              loading={loading}
-            >
-              {t("Wizard_Next_Button")}
-            </Button>
-          </Col>
+          <Button
+            type="filled"
+            endAddornment={<ArrowRight fill="#fff" width="24" height="24" />}
+            onClick={handleFormSubmit}
+            loading={loading}
+          >
+            {t("Wizard_Next_Button")}
+          </Button>
         }
         cancelButton={
           <Button onClick={goBackwards}>{t("Wizard_Back_Button")}</Button>

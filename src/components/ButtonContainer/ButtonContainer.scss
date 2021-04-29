@@ -6,5 +6,18 @@
   padding: 0 50px;
   &-submit {
     text-align: right;
+    @include sm {
+      padding-left: 0 !important;
+    }
+  }
+  &-cancel {
+    text-align: left;
+    @include sm {
+      padding-right: 0 !important;
+    }
+  }
+
+  @include sm {
+    padding: 0 15px;
   }
 }

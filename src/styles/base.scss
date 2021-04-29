@@ -6,3 +6,11 @@ $color-error: rgb(173, 27, 8);
 
 $white: #ffffff;
 $black: #000000;
+
+$screen-sm: 500px;
+
+@mixin sm {
+  @media (max-width: #{$screen-sm}) {
+    @content;
+  }
+}

@@ -16,14 +16,12 @@ const Wizard = ({ children }) => {
   const props = { goForward, goBackwards, restart };
 
   return (
-    <div className="Wizard-container">
-      <div className="Wizard">
-        <div className="Wizard-header">
-          <Stepper totalSteps={totalSteps} activeStep={index} />
-        </div>
-        <div className="Wizard-content">
-          {React.cloneElement(children[index], props)}
-        </div>
+    <div className="Wizard">
+      <div className="Wizard-header">
+        <Stepper totalSteps={totalSteps} activeStep={index} />
+      </div>
+      <div className="Wizard-content">
+        {React.cloneElement(children[index], props)}
       </div>
     </div>
   );
