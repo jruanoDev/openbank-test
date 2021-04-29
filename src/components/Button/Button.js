@@ -1,5 +1,6 @@
 import "./Button.scss";
 
+import PropTypes from "prop-types";
 import React from "react";
 
 import { ReactComponent as LoadingSpinner } from "../../assets/img/spinner.svg";
@@ -11,7 +12,7 @@ const Button = ({
   onClick,
   disabled,
   loading,
-  color = "secondary", // falta default props
+  color,
 }) => {
   const buttonType = type === "filled" ? "Button-filled" : "Button";
   const buttonColor = `color-${color}`;
@@ -34,6 +35,21 @@ const Button = ({
       )}
     </button>
   );
+};
+
+Button.defaultProps = {
+  disabled: false,
+  loading: false,
+  color: "secondary",
+};
+
+Button.propTypes = {
+  type: PropTypes.string,
+  endAddornment: PropTypes.element,
+  onClick: PropTypes.func.isRequired,
+  disabled: PropTypes.bool,
+  loading: PropTypes.bool,
+  color: PropTypes.string,
 };
 
 export default Button;

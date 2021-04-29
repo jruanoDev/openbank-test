@@ -1,5 +1,6 @@
 import "./TextField.scss";
 
+import PropTypes from "prop-types";
 import React, { useState } from "react";
 
 import VisibilityButton from "../VisibilityButton/VisibilityButton";
@@ -64,6 +65,24 @@ const TextField = ({
       </Label>
     </div>
   );
+};
+
+TextField.defaultProps = {
+  type: "text",
+  value: "",
+};
+
+TextField.propTypes = {
+  label: PropTypes.string,
+  placeHolder: PropTypes.string,
+  type: PropTypes.string,
+  maxLength: PropTypes.number,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  id: PropTypes.string,
+  name: PropTypes.string,
+  tabIndex: PropTypes.string,
+  error: PropTypes.string,
 };
 
 export default TextField;

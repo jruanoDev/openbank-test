@@ -1,5 +1,6 @@
 import "./Stepper.scss";
 
+import PropTypes from "prop-types";
 import React from "react";
 
 import Step from "./Step/Step";
@@ -24,6 +25,15 @@ const Stepper = ({ totalSteps, activeStep }) => {
   };
 
   return <div className="Stepper">{renderSteps()}</div>;
+};
+
+Stepper.defaultProps = {
+  activeStep: 0,
+};
+
+Stepper.propTypes = {
+  totalSteps: PropTypes.number.isRequired,
+  activeStep: PropTypes.number.isRequired,
 };
 
 export default Stepper;

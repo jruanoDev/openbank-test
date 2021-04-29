@@ -1,6 +1,7 @@
 import "./ProductInformation.scss";
 import "../../i18n";
 
+import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-grid-system";
 import { useTranslation } from "react-i18next";
@@ -14,17 +15,17 @@ import Checkbox from "../../components/Checkbox/Checkbox";
 
 const ICON_HEIGHT = 150;
 
+const Feature = ({ icon, text }) => (
+  <>
+    {icon}
+    <p>{text}</p>
+  </>
+);
+
 const ProductInformation = ({ goForward }) => {
   const [termsAccepted, setTermsAccepted] = useState(false);
 
   const { t } = useTranslation();
-
-  const Feature = ({ icon, text }) => (
-    <>
-      {icon}
-      <p>{text}</p>
-    </>
-  );
 
   const onTermsCheckChange = () => setTermsAccepted((prevState) => !prevState);
   return (
@@ -95,6 +96,18 @@ const ProductInformation = ({ goForward }) => {
       />
     </div>
   );
+};
+
+Feature.propTypes = {
+  icon: PropTypes.element,
+  text: PropTypes.string,
+};
+
+ProductInformation.propTypes = {
+  index: PropTypes.number,
+  goForward: PropTypes.func,
+  goBackwards: PropTypes.func,
+  restart: PropTypes.func,
 };
 
 export default ProductInformation;

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React from "react";
 import { Col, Row } from "react-grid-system";
 import { useTranslation } from "react-i18next";
@@ -60,6 +61,16 @@ const PasswordForm = ({ onChange, values, errors }) => {
       </Row>
     </>
   );
+};
+
+PasswordForm.defaultProps = {
+  errors: {},
+};
+
+PasswordForm.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  values: PropTypes.object.isRequired,
+  errors: PropTypes.object,
 };
 
 export default PasswordForm;

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-grid-system";
 import { Trans, useTranslation } from "react-i18next";
@@ -118,6 +119,14 @@ const FormPage = ({ onFormSuccess, goForward, goBackwards }) => {
       />
     </div>
   );
+};
+
+FormPage.propTypes = {
+  index: PropTypes.number,
+  goForward: PropTypes.func,
+  goBackwards: PropTypes.func,
+  restart: PropTypes.func,
+  onFormSuccess: PropTypes.func.isRequired,
 };
 
 export default FormPage;

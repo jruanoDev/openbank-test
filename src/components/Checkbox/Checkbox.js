@@ -1,5 +1,6 @@
 import "./Checkbox.scss";
 
+import PropTypes from "prop-types";
 import React from "react";
 
 const Checkbox = ({ checked, onChange, label }) => {
@@ -17,6 +18,12 @@ const Checkbox = ({ checked, onChange, label }) => {
       </label>
     </div>
   );
+};
+
+Checkbox.propTypes = {
+  checked: PropTypes.bool.isRequired,
+  onChange: PropTypes.func.isRequired,
+  label: PropTypes.string,
 };
 
 export default Checkbox;

@@ -1,5 +1,6 @@
 import "./Feedback.scss";
 
+import PropTypes from "prop-types";
 import React from "react";
 import { Col, Container, Row } from "react-grid-system";
 import { useTranslation } from "react-i18next";
@@ -71,6 +72,18 @@ const Feedback = ({ success, restart }) => {
       <ButtonContainer submitButton={button} />
     </div>
   );
+};
+
+Feedback.defaultProps = {
+  success: false,
+};
+
+Feedback.propTypes = {
+  index: PropTypes.number,
+  goForward: PropTypes.func,
+  goBackwards: PropTypes.func,
+  restart: PropTypes.func,
+  success: PropTypes.bool,
 };
 
 export default Feedback;

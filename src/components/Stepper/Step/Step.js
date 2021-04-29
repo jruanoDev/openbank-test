@@ -1,5 +1,6 @@
 import "./Step.scss";
 
+import PropTypes from "prop-types";
 import React from "react";
 
 import { ReactComponent as CompletedIcon } from "../../../assets/img/checked.svg";
@@ -16,6 +17,13 @@ const Step = ({ index, active, completed, isLast }) => {
       )}
     </>
   );
+};
+
+Step.propTypes = {
+  index: PropTypes.number.isRequired,
+  active: PropTypes.bool,
+  completed: PropTypes.bool,
+  isLast: PropTypes.bool,
 };
 
 export default Step;

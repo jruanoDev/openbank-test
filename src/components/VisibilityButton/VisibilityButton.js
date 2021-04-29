@@ -1,5 +1,6 @@
 import "./VisibilityButton.scss";
 
+import PropTypes from "prop-types";
 import React from "react";
 
 import { ReactComponent as VisibilityIcon } from "../../assets/img/visibility.svg";
@@ -15,6 +16,15 @@ const VisibilityButton = ({ type, onClick }) => {
       )}
     </button>
   );
+};
+
+VisibilityButton.defaultProps = {
+  type: "password",
+};
+
+VisibilityButton.propTypes = {
+  type: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default VisibilityButton;

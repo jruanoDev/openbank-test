@@ -1,5 +1,6 @@
 import "./ButtonContainer.scss";
 
+import PropTypes from "prop-types";
 import React from "react";
 import { Col, Container, Row } from "react-grid-system";
 
@@ -20,6 +21,11 @@ const ButtonContainer = ({ submitButton, cancelButton }) => {
       </Container>
     </div>
   );
+};
+
+ButtonContainer.propTypes = {
+  submitButton: PropTypes.element,
+  cancelButton: PropTypes.element,
 };
 
 export default ButtonContainer;
