@@ -73,7 +73,7 @@ TextField.defaultProps = {
 };
 
 TextField.propTypes = {
-  label: PropTypes.string,
+  label: PropTypes.string.isRequired,
   placeHolder: PropTypes.string,
   type: PropTypes.string,
   maxLength: PropTypes.number,

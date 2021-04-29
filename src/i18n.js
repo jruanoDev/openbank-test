@@ -9,6 +9,9 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    detection: {
+      order: ["navigator"],
+    },
     resources: {
       en: {
         translation: enTranslation,
@@ -19,4 +22,4 @@ i18n
     },
   });
 
-i18n.changeLanguage("es");
+i18n.changeLanguage();
