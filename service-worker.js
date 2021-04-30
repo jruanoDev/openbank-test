@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/openbank-test/precache-manifest.d14c8cf0cc76912a49a4379ac4b026a2.js"
+  "/openbank-test/precache-manifest.890041013910e472487b3ef734c85974.js"
 );
 
 self.addEventListener('message', (event) => {

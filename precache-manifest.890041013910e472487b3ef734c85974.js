@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a0f8da1a24277a4fc5274b72fff0c558",
+    "revision": "0969d99c18c4842ad8e1d794d4f20a63",
     "url": "/openbank-test/index.html"
   },
   {
-    "revision": "21be802a06348d64f3a4",
-    "url": "/openbank-test/static/css/main.f1832a66.chunk.css"
+    "revision": "3468822bcef9ac56db81",
+    "url": "/openbank-test/static/css/main.bb11031e.chunk.css"
   },
   {
     "revision": "cf74435a52882fdd2a42",
     "url": "/openbank-test/static/js/2.e0e9da7b.chunk.js"
   },
   {
-    "revision": "21be802a06348d64f3a4",
-    "url": "/openbank-test/static/js/main.758263f9.chunk.js"
+    "revision": "3468822bcef9ac56db81",
+    "url": "/openbank-test/static/js/main.874bebe5.chunk.js"
   },
   {
     "revision": "ff0ecdf364b53dbd9c0f",
@@ -28,16 +28,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/openbank-test/static/media/checked.c76c9eb3.svg"
   },
   {
-    "revision": "9d46f882c2ad6a476b3f9c5a0aab4518",
-    "url": "/openbank-test/static/media/done.9d46f882.svg"
+    "revision": "5f9ccf5bd44bba4899ce0e1ed2e3c86e",
+    "url": "/openbank-test/static/media/done.5f9ccf5b.svg"
   },
   {
-    "revision": "828e06a5791d1c1cb89cd6cd7da78b3a",
-    "url": "/openbank-test/static/media/icon1.828e06a5.svg"
+    "revision": "038a15fa021d5eac6d2e9fe3b62c9fa9",
+    "url": "/openbank-test/static/media/icon1.038a15fa.svg"
   },
   {
-    "revision": "31499ccb464a326d26f3004f9e48772f",
-    "url": "/openbank-test/static/media/icon2.31499ccb.svg"
+    "revision": "88e596165d77d9995e3d1291ec4ca09d",
+    "url": "/openbank-test/static/media/icon2.88e59616.svg"
   },
   {
     "revision": "364e032cf54e13334c2b8dba0c2b0fbe",
@@ -52,7 +52,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/openbank-test/static/media/visibility_off.54810c18.svg"
   },
   {
-    "revision": "befe209d16ae8b3a00ed2b55cb89a88d",
-    "url": "/openbank-test/static/media/warning.befe209d.svg"
+    "revision": "22a6617a0026b46069f032d5173661c3",
+    "url": "/openbank-test/static/media/warning.22a6617a.svg"
   }
 ]);

@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/openbank-test/static/css/main.f1832a66.chunk.css",
-    "main.js": "/openbank-test/static/js/main.758263f9.chunk.js",
-    "main.js.map": "/openbank-test/static/js/main.758263f9.chunk.js.map",
+    "main.css": "/openbank-test/static/css/main.bb11031e.chunk.css",
+    "main.js": "/openbank-test/static/js/main.874bebe5.chunk.js",
+    "main.js.map": "/openbank-test/static/js/main.874bebe5.chunk.js.map",
     "runtime~main.js": "/openbank-test/static/js/runtime~main.25fb9028.js",
     "runtime~main.js.map": "/openbank-test/static/js/runtime~main.25fb9028.js.map",
     "static/js/2.e0e9da7b.chunk.js": "/openbank-test/static/js/2.e0e9da7b.chunk.js",
     "static/js/2.e0e9da7b.chunk.js.map": "/openbank-test/static/js/2.e0e9da7b.chunk.js.map",
     "index.html": "/openbank-test/index.html",
-    "precache-manifest.d14c8cf0cc76912a49a4379ac4b026a2.js": "/openbank-test/precache-manifest.d14c8cf0cc76912a49a4379ac4b026a2.js",
+    "precache-manifest.890041013910e472487b3ef734c85974.js": "/openbank-test/precache-manifest.890041013910e472487b3ef734c85974.js",
     "service-worker.js": "/openbank-test/service-worker.js",
-    "static/css/main.f1832a66.chunk.css.map": "/openbank-test/static/css/main.f1832a66.chunk.css.map",
+    "static/css/main.bb11031e.chunk.css.map": "/openbank-test/static/css/main.bb11031e.chunk.css.map",
     "static/media/arrow_right.8bca36b7.svg": "/openbank-test/static/media/arrow_right.8bca36b7.svg",
     "static/media/Checkbox.scss": "/openbank-test/static/media/checked.c76c9eb3.svg",
-    "static/media/done.9d46f882.svg": "/openbank-test/static/media/done.9d46f882.svg",
-    "static/media/icon1.828e06a5.svg": "/openbank-test/static/media/icon1.828e06a5.svg",
-    "static/media/icon2.31499ccb.svg": "/openbank-test/static/media/icon2.31499ccb.svg",
+    "static/media/done.5f9ccf5b.svg": "/openbank-test/static/media/done.5f9ccf5b.svg",
+    "static/media/icon1.038a15fa.svg": "/openbank-test/static/media/icon1.038a15fa.svg",
+    "static/media/icon2.88e59616.svg": "/openbank-test/static/media/icon2.88e59616.svg",
     "static/media/spinner.364e032c.svg": "/openbank-test/static/media/spinner.364e032c.svg",
     "static/media/visibility.5301add1.svg": "/openbank-test/static/media/visibility.5301add1.svg",
     "static/media/visibility_off.54810c18.svg": "/openbank-test/static/media/visibility_off.54810c18.svg",
-    "static/media/warning.befe209d.svg": "/openbank-test/static/media/warning.befe209d.svg"
+    "static/media/warning.22a6617a.svg": "/openbank-test/static/media/warning.22a6617a.svg"
   }
 }
