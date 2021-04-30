@@ -11,7 +11,7 @@ describe("Wizard", () => {
   const component = (
     <Wizard>
       <ProductInformation />
-      <FormPage onFormSuccess={func} />
+      <FormPage onFormSuccess={func} goForward={func} goBackwards={func} />
     </Wizard>
   );
 
